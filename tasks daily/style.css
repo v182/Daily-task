@@ -1,0 +1,116 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #2b5876, #4e4376);
+  color: white;
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+.todo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+form {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  color: #333;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  margin-bottom: 30px;
+  width: 300px;
+}
+
+form input, form textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+form button {
+  background: #28a745;
+  color: white;
+  border: none;
+  padding: 10px;
+  width: 100%;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background: #218838;
+}
+
+.task-lists {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  max-width: 900px;
+  gap: 20px;
+}
+
+.task-section {
+  list-style: none;
+  padding: 0;
+}
+
+.task {
+  background: rgba(255, 255, 255, 0.9);
+  color: #333;
+  margin: 10px 0;
+  padding: 15px;
+  border-left: 8px solid #007bff;
+  border-radius: 8px;
+  position: relative;
+  animation: slideIn 0.5s ease forwards;
+}
+
+.completed .task {
+  border-left-color: #28a745;
+}
+
+.task button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: crimson;
+  color: white;
+  border: none;
+  padding: 5px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.task button:hover {
+  background: darkred;
+}
+
+.task small {
+  display: block;
+  font-size: 0.75em;
+  color: #555;
+  margin-top: 5px;
+}
+
+.task .actions {
+  margin-top: 10px;
+}
+
+.task .actions button {
+  background: #007bff;
+  margin-right: 5px;
+}
+
+@keyframes slideIn {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
